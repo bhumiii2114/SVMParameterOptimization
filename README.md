@@ -65,7 +65,8 @@ This project focuses on optimizing a Support Vector Machine (SVM) classifier on 
 ✅ **Sample S1 had the highest accuracy.**
 
 ---
-
+## Convergence Graph
+![Convergence graph](Screenshot%202025-04-20%20151733.png)
 ## 📌 Conclusion
 
 - SVM performed best with the **linear kernel**, `scale` gamma and low-to-moderate `C` values.
