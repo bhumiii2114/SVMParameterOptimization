@@ -22,8 +22,8 @@ This project focuses on optimizing a Support Vector Machine (SVM) classifier on 
 
 1. **Data Loading & Preprocessing**
    - Dataset was loaded using `ucimlrepo`.
-   - Missing values checked and cleaned (if any).
-   - Target column extracted, converted to a flat series for modeling.
+   - Missing values checked .
+   - Target column converted to a flat series for modeling.
 
 2. **Data Splitting**
    - Dataset was randomly split into 10 **70-30 train-test samples** to test SVM consistency.
@@ -51,23 +51,23 @@ This project focuses on optimizing a Support Vector Machine (SVM) classifier on 
 
 | Sample # | Best Accuracy | Best SVM Parameters (Kernel, C, Gamma)   |
 |----------|----------------|------------------------------------------|
-| S1       | 0.865          | rbf, C=1, gamma=scale                    |
-| S2       | 0.881          | rbf, C=10, gamma=auto                    |
-| S3       | 0.867          | poly, C=1, gamma=scale                   |
-| S4       | 0.888          | rbf, C=1, gamma=scale                    |
-| S5       | 0.869          | linear, C=1, gamma=auto                  |
-| S6       | 0.891 ✅       | rbf, C=10, gamma=scale                   |
-| S7       | 0.879          | rbf, C=10, gamma=scale                   |
-| S8       | 0.870          | sigmoid, C=0.1, gamma=scale              |
-| S9       | 0.862          | linear, C=1, gamma=scale                 |
-| S10      | 0.875          | rbf, C=1, gamma=auto                     |
+| S1       | 0.9977  ✅      | linear, C=1, gamma=scale                   |
+| S2       | 0.9947          | linear, C=1, gamma=scale                   |
+| S3       | 0.9974          | linear, C=10, gamma=scale                 |
+| S4       | 0.9944          | linear, C=1, gamma=scale                   |
+| S5       | 0.9941         | linear, C=1, gamma=scale                 |
+| S6       | 0.9957          | linear, C=1, gamma=scale                   |
+| S7       | 0.9951         | linear, C=1, gamma=scale                    |
+| S8       | 0.9951         | linear, C=10, gamma=scale               |
+| S9       | 0.9967         | linear, C=10, gamma=scale                |
+| S10      | 0.9961         | linear, C=10, gamma=scale                   |
 
-✅ **Sample S6 had the highest accuracy.**
+✅ **Sample S1 had the highest accuracy.**
 
 ---
 
 ## 📌 Conclusion
 
-- SVM performed best with the **RBF kernel** and moderate-to-high `C` values.
+- SVM performed best with the **linear kernel**, `scale` gamma and low-to-moderate `C` values.
 - The optimization process revealed consistent performance across samples with minor variance.
 - The convergence graph confirms that optimal hyperparameters were reached early and remained stable, validating the robustness of the optimization approach.
